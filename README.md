@@ -1,16 +1,73 @@
-# React + Vite
+CyberGuard-Toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1918" height="935" alt="image" src="https://github.com/user-attachments/assets/02610979-280d-44bd-ac42-24c39d3ee71d" />
 
-Currently, two official plugins are available:
+-----------------------------------------------------------------------------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features-
 
-## React Compiler
+URL security scanner (simulated)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+File malware scan simulation
 
-## Expanding the ESLint configuration
+Cryptography toolkit
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Hash generation (Web Crypto API)
+
+Hash identification
+
+Base64 encode / decode
+
+Steganography (LSB image hiding + extraction)
+
+Password strength checker with suggestions
+
+Responsive UI using Tailwind CSS
+
+Lucide icons for UI affordances
+
+-----------------------------------------------------------------------------------
+
+Tech Stack-
+
+React (functional components + hooks)
+
+Tailwind CSS
+
+Vite (dev build tooling)
+
+Browser Web Crypto API (crypto.subtle)
+
+Lucide React icons
+
+-----------------------------------------------------------------------------------
+
+Requirements-
+
+Node.js (v16+ recommended)
+
+npm or yarn
+
+Modern browser (for crypto.subtle and canvas APIs)
+
+-----------------------------------------------------------------------------------
+
+Usage Notes-
+
+Hashing: Uses browser crypto.subtle.digest for supported algorithms (SHA family). MD5 / MD4 / MD2 are not supported by crypto.subtle.
+
+Steganography: LSB-based text hiding modifies image data in the browser. Keep messages short; large messages will fail due to capacity limits. The code uses a simple EOF sentinel (1111111111111110) to mark message end.
+
+File scanning: Simulated only — no real malware scanning happens client-side.
+
+Base64: Uses btoa / atob — these are not safe for arbitrary Unicode without proper encoding/decoding.
+
+-----------------------------------------------------------------------------------
+
+Security & Ethical Notice-
+
+This project is educational. Do not use the steganography or simulated scanning features to perform covert or malicious activities.
+
+Do not attempt to scan other people's systems without explicit permission.
+
+The app does not provide production-grade malware detection or real threat intelligence.
